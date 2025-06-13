@@ -1,4 +1,5 @@
 function convertToRoman(num) {
+	if (num <= 0 || num > 100000) return "INVALID";
   // Array of Roman numerals and their corresponding values in descending order	
   	const obj = {
       0:['M',1000], 
@@ -12,7 +13,6 @@ function convertToRoman(num) {
 
   //your code here
 let result = "";
-
 for (let [symbol, value] of obj) {
 	while (num >= value) {
 		result += symbol;
@@ -21,9 +21,7 @@ for (let [symbol, value] of obj) {
 }
 	return result;
 }
-// You can test your code by running the above function and printing it to console by pressing the run button at the top. To run it with input 36, uncomment the following line
-
-// console.log(convertToRoman(36));
-
 // do not edit below this line
 module.exports = convertToRoman
+console.log(36);
+console.log
