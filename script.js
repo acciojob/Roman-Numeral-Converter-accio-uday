@@ -27,7 +27,9 @@ for (let [symbol, value] of obj) {
 }
 	return result;
 }
+
+// Example usage
+console.log(convertToRoman(14)); // output: XIV
+
 // do not edit below this line
 module.exports = convertToRoman
-console.log(36);
-console.log
