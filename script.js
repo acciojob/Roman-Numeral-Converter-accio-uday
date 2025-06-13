@@ -2,22 +2,22 @@ function convertToRoman(num) {
 	if (num <= 0 || num > 100000) return "INVALID";
 	
   	const romanMap = [
-      ['M',1000], 
-      ['D', 500], 
-      ['C', 100], 
-      ['L', 50], 
-      ['X', 10], 
-      ['V', 5], 
-      ['I', 1],
+      ['M',1000],
 	  ['CM', 900],
+      ['D', 500],
 	  ['CD', 400],
-	  ['XC', 90],
+      ['C', 100],
+      ['XC', 90],
+      ['L', 50],
 	  ['XL', 40],
-	  ['IV', 4],
+      ['X', 10],
 	  ['IX', 9]	
+      ['V', 5],
+	  ['IV', 4],
+      ['I', 1],
     ];
 
-let result = "";
+let result = '';
 for (let [symbol, value] of romanMap) {
 	while (num >= value) {
 		result += symbol;
@@ -29,5 +29,7 @@ for (let [symbol, value] of romanMap) {
 }
 
 module.exports = convertToRoman;
-console.log(14)
-console.log
+
+// Correct usage 
+console.log(convertToRoman(14));   // output: XIV
+console.log(convertToRoman(798));  // output: DCCXCVIII
