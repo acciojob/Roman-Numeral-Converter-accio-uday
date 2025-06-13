@@ -1,7 +1,7 @@
 function convertToRoman(num) {
 	if (num <= 0 || num > 100000) return "INVALID";
 	
-  	const obj = [
+  	const romanMap = [
       ['M',1000], 
       ['D', 500], 
       ['C', 100], 
@@ -17,19 +17,16 @@ function convertToRoman(num) {
 	  ['IX', 9]	
     ];
 
-  //your code here
 let result = "";
-for (let [symbol, value] of obj) {
+for (let [symbol, value] of romanMap) {
 	while (num >= value) {
 		result += symbol;
 		num -= value;
 	}
 }
+	
 	return result;
 }
 
-// Example usage
-console.log(convertToRoman(14)); // output: XIV
-
-// do not edit below this line
 module.exports = convertToRoman
+console.log(14); // output: XIV
