@@ -28,5 +28,6 @@ for (let [symbol, value] of romanMap) {
 	return result;
 }
 
-module.exports = convertToRoman
-console.log(14); // output: XIV
+module.exports = convertToRoman;
+console.log(14)
+console.log
